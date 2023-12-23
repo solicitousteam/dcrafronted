@@ -1,0 +1,39 @@
+{
+    "name": "scottybo/textlocal",
+    "description": "Laravel Text Local Package",
+    "license": "MIT",
+    "keywords": [
+        "laravel textlocal",
+        "textlocal gateway",
+        "textlocal sms gateway",
+        "text local",
+        "laravel textlocal package"
+    ],
+    "authors": [
+        {
+            "name": "Scott Bowler",
+            "email": "scott.bowler@dcsworldwide.net",
+            "homepage": "https://www.dcsworldwide.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4" : {
+            "App\\TextLocalApi\\" : "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "App\\TextLocalApi\\TextLocalServiceProvider"
+            ],
+            "aliases": {
+                "TextLocal": "App\\TextLocalApi\\TextLocalFacade"
+            }
+        }
+    }
+}
